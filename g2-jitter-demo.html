@@ -1,0 +1,59 @@
+<!DOCTYPE html >
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,height=device-height">
+          <title>扰动点图</title>
+          <style>::-webkit-scrollbar{display: none;}html,body{overflow: hidden;height:100%;margin:0;}</style>
+</head>
+        <body>
+          <div id="mountNode"></div>
+          <script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+          <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.2.7-beta.4/dist/g2.min.js"></script>
+          <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.8.9/dist/data-set.min.js"></script>
+          <script src="https://gw.alipayobjects.com/os/antv/assets/lib/jquery-3.2.1.min.js"></script>
+          <script>
+            $.getJSON('/assets/data/dv-grades.json', function(data) {
+  var chart = new G2.Chart({
+              container: 'mountNode',
+            forceFit: true,
+            height: window.innerHeight
+          });
+          var v_data=
+  [{"Class": "Summer 2013","Grade":"C","Score":272.5},{"Class": "Summer 2013","Grade":"C","Score":77.5},{"Class": "Summer 2013","Grade":"B","Score":187.5},{"Class": "Summer 2013","Grade":"A","Score":191},{"Class": "Summer 2013","Grade":"A","Score":91.5},{"Class": "Summer 2013","Grade":"A","Score":90.5},{"Class": "Summer 2013","Grade":"A","Score":90.5},{"Class": "Summer 2013","Grade":"A","Score":90.5},{"Class": "Summer 2013","Grade":"A","Score":98.5},{"Class": "Summer 2013","Grade":"A","Score":94.5},{"Class": "Summer 2013","Grade":"A","Score":98.5},{"Class": "Summer 2013","Grade":"A","Score":95},{"Class": "Summer 2013","Grade":"A","Score":97},{"Class": "Summer 2013","Grade":"A","Score":98},{"Class": "Spring 2013","Grade":"C","Score":69},{"Class": "Spring 2013","Grade":"C","Score":52.5},{"Class": "Spring 2013","Grade":"C","Score":67},{"Class": "Spring 2013","Grade":"C","Score":62},{"Class": "Spring 2013","Grade":"C","Score":68},{"Class": "Spring 2013","Grade":"C","Score":69},{"Class": "Spring 2013","Grade":"C","Score":73},{"Class": "Spring 2013","Grade":"C","Score":70.5},{"Class": "Spring 2013","Grade":"C","Score":76},{"Class": "Spring 2013","Grade":"C","Score":71},{"Class": "Spring 2013","Grade":"C","Score":79.5},{"Class": "Spring 2013","Grade":"C","Score":72},{"Class": "Spring 2013","Grade":"C","Score":70.5},{"Class": "Spring 2013","Grade":"C","Score":79.5},{"Class": "Spring 2013","Grade":"C","Score":78.5},{"Class": "Spring 2013","Grade":"C","Score":71},{"Class": "Spring 2013","Grade":"C","Score":75},{"Class": "Spring 2013","Grade":"C","Score":78.5},{"Class": "Spring 2013","Grade":"C","Score":76},{"Class": "Spring 2013","Grade":"C","Score":77.5},{"Class": "Spring 2013","Grade":"C","Score":75},{"Class": "Spring 2013","Grade":"C","Score":79.5},{"Class": "Spring 2013","Grade":"C","Score":71},{"Class": "Spring 2013","Grade":"C","Score":75.5},{"Class": "Spring 2013","Grade":"B","Score":87.5},{"Class": "Spring 2013","Grade":"B","Score":88.5},{"Class": "Spring 2013","Grade":"B","Score":89.5},{"Class": "Spring 2013","Grade":"B","Score":87},{"Class": "Spring 2013","Grade":"B","Score":89.5},{"Class": "Spring 2013","Grade":"B","Score":88},{"Class": "Spring 2013","Grade":"B","Score":81},{"Class": "Spring 2013","Grade":"B","Score":80},{"Class": "Spring 2013","Grade":"B","Score":80.5},{"Class": "Spring 2013","Grade":"B","Score":82.5},{"Class": "Spring 2013","Grade":"B","Score":80},{"Class": "Spring 2013","Grade":"B","Score":82},{"Class": "Spring 2013","Grade":"B","Score":81},{"Class": "Spring 2013","Grade":"B","Score":83.5},{"Class": "Spring 2013","Grade":"B","Score":86},{"Class": "Spring 2013","Grade":"B","Score":83.5},{"Class": "Spring 2013","Grade":"B","Score":85.5},{"Class": "Spring 2013","Grade":"B","Score":86},{"Class": "Spring 2013","Grade":"B","Score":86},{"Class": "Spring 2013","Grade":"B","Score":85},{"Class": "Spring 2013","Grade":"B","Score":83},{"Class": "Spring 2013","Grade":"B","Score":83.5},{"Class": "Spring 2013","Grade":"B","Score":83.5},{"Class": "Spring 2013","Grade":"A","Score":90.5},{"Class": "Spring 2013","Grade":"A","Score":92.5},{"Class": "Spring 2013","Grade":"A","Score":92.5},{"Class": "Spring 2013","Grade":"A","Score":91.5},{"Class": "Spring 2013","Grade":"A","Score":92.5},{"Class": "Spring 2013","Grade":"A","Score":90},{"Class": "Spring 2013","Grade":"A","Score":90},{"Class": "Spring 2013","Grade":"A","Score":92},{"Class": "Spring 2013","Grade":"A","Score":91.5},{"Class": "Spring 2013","Grade":"A","Score":92.5},{"Class": "Spring 2013","Grade":"A","Score":98.5},{"Class": "Spring 2013","Grade":"A","Score":95},{"Class": "Spring 2013","Grade":"A","Score":94},{"Class": "Spring 2013","Grade":"A","Score":93},{"Class": "Spring 2013","Grade":"A","Score":99},{"Class": "Spring 2013","Grade":"A","Score":95},{"Class": "Spring 2013","Grade":"A","Score":97},{"Class": "Spring 2013","Grade":"A","Score":100},{"Class": "Spring 2013","Grade":"A","Score":97.5},{"Class": "Spring 2013","Grade":"A","Score":96},{"Class": "Spring 2013","Grade":"A","Score":96},{"Class": "Spring 2013","Grade":"A","Score":93.5},{"Class": "Spring 2013","Grade":"A","Score":98},{"Class": "Spring 2013","Grade":"A","Score":93},{"Class": "Spring 2012","Grade":"C","Score":67.2},{"Class": "Spring 2012","Grade":"C","Score":71.8},{"Class": "Spring 2012","Grade":"C","Score":73.4},{"Class": "Spring 2012","Grade":"C","Score":71.1},{"Class": "Spring 2012","Grade":"C","Score":77.4},{"Class": "Spring 2012","Grade":"C","Score":78.3},{"Class": "Spring 2012","Grade":"C","Score":76.8},{"Class": "Spring 2012","Grade":"C","Score":71.1},{"Class": "Spring 2012","Grade":"C","Score":79.9},{"Class": "Spring 2012","Grade":"C","Score":74.9},{"Class": "Spring 2012","Grade":"C","Score":78.4},{"Class": "Spring 2012","Grade":"C","Score":75.2},{"Class": "Spring 2012","Grade":"C","Score":77.7},{"Class": "Spring 2012","Grade":"C","Score":71.8},{"Class": "Spring 2012","Grade":"C","Score":78},{"Class": "Spring 2012","Grade":"B","Score":87.4},{"Class": "Spring 2012","Grade":"B","Score":88},{"Class": "Spring 2012","Grade":"B","Score":87.7},{"Class": "Spring 2012","Grade":"B","Score":88.5},{"Class": "Spring 2012","Grade":"B","Score":87.4},{"Class": "Spring 2012","Grade":"B","Score":89.9},{"Class": "Spring 2012","Grade":"B","Score":89.9},{"Class": "Spring 2012","Grade":"B","Score":81.1},{"Class": "Spring 2012","Grade":"B","Score":80.5},{"Class": "Spring 2012","Grade":"B","Score":81.1},{"Class": "Spring 2012","Grade":"B","Score":83},{"Class": "Spring 2012","Grade":"B","Score":85.5},{"Class": "Spring 2012","Grade":"B","Score":84.3},{"Class": "Spring 2012","Grade":"B","Score":86.8},{"Class": "Spring 2012","Grade":"A","Score":90.5},{"Class": "Spring 2012","Grade":"A","Score":91.1},{"Class": "Spring 2012","Grade":"A","Score":90},{"Class": "Spring 2012","Grade":"A","Score":90.5},{"Class": "Spring 2012","Grade":"A","Score":90.2},{"Class": "Spring 2012","Grade":"A","Score":92.6},{"Class": "Spring 2012","Grade":"A","Score":96.8},{"Class": "Spring 2012","Grade":"A","Score":99.3},{"Class": "Spring 2012","Grade":"A","Score":99.3},{"Class": "Spring 2012","Grade":"A","Score":94.9},{"Class": "Spring 2012","Grade":"A","Score":93.6},{"Class": "Spring 2012","Grade":"A","Score":95.5},{"Class": "Spring 2012","Grade":"A","Score":103},{"Class": "Fall 2013","Grade":"C","Score":69},{"Class": "Fall 2013","Grade":"C","Score":66.1},{"Class": "Fall 2013","Grade":"C","Score":44.8},{"Class": "Fall 2013","Grade":"C","Score":75.2},{"Class": "Fall 2013","Grade":"C","Score":78},{"Class": "Fall 2013","Grade":"C","Score":71},{"Class": "Fall 2013","Grade":"B","Score":87.5},{"Class": "Fall 2013","Grade":"B","Score":88.1},{"Class": "Fall 2013","Grade":"B","Score":81.5},{"Class": "Fall 2013","Grade":"B","Score":80.3},{"Class": "Fall 2013","Grade":"B","Score":85},{"Class": "Fall 2013","Grade":"B","Score":83.5},{"Class": "Fall 2013","Grade":"B","Score":86.8},{"Class": "Fall 2013","Grade":"B","Score":84},{"Class": "Fall 2013","Grade":"A","Score":91.2},{"Class": "Fall 2013","Grade":"A","Score":90.9},{"Class": "Fall 2013","Grade":"A","Score":90},{"Class": "Fall 2013","Grade":"A","Score":92},{"Class": "Fall 2013","Grade":"A","Score":93.9},{"Class": "Fall 2013","Grade":"A","Score":97.5},{"Class": "Fall 2013","Grade":"A","Score":97.5},{"Class": "Fall 2013","Grade":"A","Score":94.2},{"Class": "Fall 2013","Grade":"A","Score":94.7},{"Class": "Fall 2013","Grade":"A","Score":97},{"Class": "Fall 2013","Grade":"A","Score":99.5},{"Class": "Fall 2013","Grade":"A","Score":98.5},{"Class": "Fall 2013","Grade":"A","Score":99}];
+            chart.source(v_data);
+  chart.tooltip({
+              crosshairs: {
+              type: 'cross'
+          }
+        });
+  chart.legend({
+              reversed: true // 图例项逆序显示
+          });
+  chart.axis('Score', {
+              grid: null
+          });
+          // x轴的栅格线居中
+  chart.axis('Class', {
+              tickLine: null,
+            subTickCount: 1, // 次刻度线个数
+    subTickLine: {
+              lineWidth: 1,
+            stroke: '#BFBFBF',
+            length: 4
+          },
+    grid: {
+              align: 'center', // 网格顶点从两个刻度中间开始
+      lineStyle: {
+              stroke: '#8C8C8C',
+            lineWidth: 1,
+            lineDash: [3, 3]
+          }
+        }
+      });
+      chart.point().position('Class*Score').color('Grade').adjust('jitter').shape('circle').opacity(0.65).size(4);
+      chart.render();
+    });
+</script>
+        </body>
+</html>
